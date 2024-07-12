@@ -25,11 +25,8 @@ petal_width=st.sidebar.slider("petal width",float(df['petal width (cm)'].min()),
 
 input_data=[[sepal_length,sepal_width,petal_length,petal_width]]
 
-
-#prediction
-
 prediction=model.predict(input_data)
 predicted_species=target_names[prediction[0]]
 
-st.write("Prediction")
-st.write(f"The predicted species is {predicted_species }")
+st.title("Prediction")
+st.markdown(f"<span style='font-size: 24px'>The predicted species is <span style='color: darkblue;'>{predicted_species.upper()}</span></span>",unsafe_allow_html=True)
